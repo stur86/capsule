@@ -1,11 +1,21 @@
 // Color definitions
 
 $capsule-colors: (
+    'mono': (
+        'primary': #555555,
+        'darker': #000000,
+        'lighter': #eeeeee,
+    ),
     'bulma': (
         'primary': #00D1B2,
         'darker': #205C53,
         'lighter': #D2EAE7,
     ),
+    'red': (
+        'primary': #A33A3A,
+        'darker': #250101,
+        'lighter': #F4CBCB,
+    )
 );
 
 @function capsule-color($key: 'bulma', $variant: 'primary') {
@@ -17,45 +27,53 @@ $capsule-colors: (
         background-color: map-get($cmap, 'lighter');
         border-color: map-get($cmap, 'primary');
         outline-color: map-get($cmap, 'primary');
-        color: map-get($cmap, 'darker');
+        color: map-get($cmap, 'darker') !important;
+    }
+
+    .cc-#{$profile}.cc-ctrl[type=button]:hover {
+        background-color: mix(white, map-get($cmap, 'lighter'), 10%);
+    }
+
+    .cc-#{$profile}.cc-ctrl[type=button]:active {
+        border-color: mix(white, map-get($cmap, 'primary'), 50%);
+        outline-color: mix(white, map-get($cmap, 'primary'), 50%);        
+        background-color: mix(black, map-get($cmap, 'lighter'), 10%);
+    }
+
+    .cc-#{$profile} .cc-ctrl[type=radio] + label {
+        border-color: map-get($cmap, 'primary');
+        outline-color: map-get($cmap, 'primary');        
+    }
+
+    .cc-#{$profile}.cc-ctrl[type=checkbox]:checked + label, 
+    .cc-#{$profile} .cc-ctrl[type=radio]:checked + label {
+      background-color: map-get($cmap, 'primary');
+      box-shadow: inset -2px -2px 0px map-get($cmap, 'lighter');
     }
 }
 
+// General classes
+
 .ctrl-container {
+  @extend .cc-mono; // Default colors
   display: inline-block;
-  background-color: #dddddd;
   padding: 10px;
 }
 
 .cc-ctrl {
+  @extend .cc-mono; // Default colors
   float: right;
   margin: 0 5px;
-  background-color: #eeeeee;
-  border-color: #555555;
-  outline-color: #555555;
-  color: #000000;
 }
-
-.cc-yellow {
-  background-color: #ffee99;
-  border-color: #dd7700;
-  outline-color: #dd7700;
-  color: #553300;
-}
-
-/*
-.cc-blue {
-  background-color: $color-primary-1;
-  border-color: $color-primary-0;
-  outline-color: $color-primary-0;
-  color: $color-primary-4;
-}*/
 
 .cc-ctrl-label {
   color: #222222;
+  font-size: 14px;
   padding-top: 5px;
   padding-left: 5px;
 }
+
+// TEXT elements
 
 .cc-ctrl[type=text] {
   border-width: 1px;
@@ -70,6 +88,8 @@ $capsule-colors: (
   outline-offset: 1px;
 }
 
+// BUTTON elements
+
 .cc-ctrl[type=button] {
   border-width: 1px;
   border-style: solid;
@@ -78,17 +98,11 @@ $capsule-colors: (
   min-width: 50px;
 }
 
-.cc-ctrl[type=button]:hover {
-  filter: saturate(0.7);
-}
-
-.cc-ctrl[type=button]:active {
-  filter: saturate(2);
-}
-
 .cc-ctrl[type=button]:focus {
   outline: none;
 }
+
+// CHECKBOX elements
 
 .cc-ctrl[type=checkbox] {
   display: none;
@@ -96,6 +110,8 @@ $capsule-colors: (
 
 .cc-ctrl[type=checkbox] + label {
   display: inline-block;
+  position: relative;
+  bottom: -2px;
   width: 1em;
   height: 1em;
   border-style: solid;
@@ -103,19 +119,15 @@ $capsule-colors: (
   border-radius: 5px 0 5px 0;
 }
 
-/*
-.cc-ctrl[type=checkbox]:checked + label {
-  &.cc-blue {
-    background-color: $color-primary-0;
-    box-shadow: inset -2px -2px 0px $color-primary-1;    
-  }
-}*/
+// RADIO BUTTON elements
 
 .cc-ctrl[type=radio] {
   display: none;
 }
 
 .cc-ctrl[type=radio] + label {
+  position: relative;
+  bottom: -2px;
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -124,10 +136,7 @@ $capsule-colors: (
   border-radius: 5px 0 5px 0;
 }
 
-.cc-ctrl[type=radio]:checked + label {
-  background-color: #0077dd;
-  box-shadow: inset -2px -2px 0px #99eeff;
-}
+// SELECT elements
 
 select.cc-ctrl {
   border-width: 1px;
@@ -141,6 +150,8 @@ select.cc-ctrl:focus {
   outline-width: 1px;
   outline-offset: 1px;
 }
+
+/* Disabled for now 
 
 select.cc-ctrl[multiple] {
   right: 0;
@@ -182,25 +193,30 @@ select.cc-ctrl[multiple] + label:after {
   padding-left: 5px;
 }
 
+.cc-multiselect-cont {
+  position: relative;
+  float: right;
+  overflow: visible;
+}
+*/
+
+// Form 
+
 ul.cc-form {
   display: table;
+  float: right;
+  font-size: 14px;
   list-style-type: none;
   padding-left: 5px;
   padding-top: 5px;
   margin: 0;
-  background-color: #eeeeee;
+  border-radius: 5px 0 5px 0;
   overflow: auto;
 }
 
 ul.cc-form li {
   padding: 5px;
   overflow: auto;
-}
-
-.cc-multiselect-cont {
-  position: relative;
-  float: right;
-  overflow: visible;
 }
 
 

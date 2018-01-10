@@ -3,10 +3,14 @@
 <head>
     <title>Capsule test page</title>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/capsule.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css.map">
     <link rel="stylesheet" type="text/css" href="css/capsule.css">
+
 </head>
 <body>
     <section class="hero is-primary is-bold">
@@ -25,24 +29,129 @@
     <div class="section">
         <div class="container">
             <table class="table is-bordered is-striped is-fullwidth">
-                <thead>
+                <thead class="has-text-weight-bold">
                     <tr>
                         <td> Colors </td>
-                        <td> #ff0000 </td>
+                        <td class="cc-mono"> Mono </td>
+                        <td class="cc-bulma"> Bulma </td>
+                        <td class="cc-red"> Red </td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td> Colors </td>
-                        <td> #ff0000 </td>
+                        <td> Text input </td>
+                        <td> <input type="text" class="cc-ctrl cc-mono" placeholder="Type here..."> </input> </td>
+                        <td> <input type="text" class="cc-ctrl cc-bulma" placeholder="Type here..."> </input> </td>
+                        <td> <input type="text" class="cc-ctrl cc-red" placeholder="Type here..."> </input> </td>
+                    </tr>
+                    <tr>
+                        <td> Button </td>
+                        <td> <input class="cc-ctrl cc-mono" type="button" value="Click here"></input> </td>
+                        <td> <input class="cc-ctrl cc-bulma" type="button" value="Click here"></input> </td>
+                        <td> <input class="cc-ctrl cc-red" type="button" value="Click here"></input> </td>
+                    </tr>
+                    <tr>
+                        <td> Checkbox </td>
+                        <td>
+                            <span class="cc-ctrl-label">Check here</span>
+                            <input class="cc-ctrl cc-mono" type="checkbox" id="check-mono" value="Check here"></input> 
+                        </td>
+                        <td> 
+                            <span class="cc-ctrl-label">Check here</span>
+                            <input class="cc-ctrl cc-bulma" type="checkbox" id="check-bulma" value="Check here"></input> 
+                        </td>
+                        <td> 
+                            <span class="cc-ctrl-label">Check here</span>
+                            <input class="cc-ctrl cc-red" type="checkbox" id="check-red" value="Check here"></input> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Radio buttons </td>
+                        <td>       
+                            <ul class="cc-form cc-mono">
+                                <li>
+                                <input class="cc-ctrl" type="radio"
+                                 id="contactChoice1-mono"
+                                 name="contact" value="email">Email
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio"             
+                                 id="contactChoice2-mono"
+                                 name="contact" value="phone">Phone
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio" 
+                                 id="contactChoice3-mono"
+                                 name="contact" value="mail">Mail
+                                </li>
+                            </ul>
+                        </td>
+                        <td>       
+                            <ul class="cc-form cc-bulma">
+                                <li>
+                                <input class="cc-ctrl" type="radio"
+                                 id="contactChoice1-bulma"
+                                 name="contact" value="email">Email
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio"             
+                                 id="contactChoice2-bulma"
+                                 name="contact" value="phone">Phone
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio" 
+                                 id="contactChoice3-bulma"
+                                 name="contact" value="mail">Mail
+                                </li>
+                            </ul>
+                        </td>
+                        <td>       
+                            <ul class="cc-form cc-red">
+                                <li>
+                                <input class="cc-ctrl" type="radio"
+                                 id="contactChoice1-red"
+                                 name="contact" value="email">Email
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio"             
+                                 id="contactChoice2-red"
+                                 name="contact" value="phone">Phone
+                                </li>
+                                <li>
+                                <input  class="cc-ctrl" type="radio" 
+                                 id="contactChoice3-red"
+                                 name="contact" value="mail">Mail
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Select </td>
+                        <td>
+                            <select class="cc-ctrl cc-mono">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                       </td>
+                        <td>
+                            <select class="cc-ctrl cc-bulma">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                       </td>
+                        <td>
+                            <select class="cc-ctrl cc-red">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                       </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <div class="cc-bulma" style="border-style: solid; border-width: 1px;">
-        Test
     </div>
 </body>
 </html>
