@@ -88,6 +88,21 @@ $capsule-colors: (
   outline-offset: 1px;
 }
 
+// TEXTAREA elements
+
+textarea.cc-ctrl {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px 0 5px 0;
+  padding: 1px 3px;
+}
+
+textarea.cc-ctrl:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-offset: 1px;
+}
+
 // BUTTON elements
 
 .cc-ctrl[type=button] {
