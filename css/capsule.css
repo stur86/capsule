@@ -1,8 +1,8 @@
 @charset "UTF-8";
 .cc-mono, .ctrl-container, .cc-ctrl {
-  background-color: #eeeeee;
-  border-color: #555555;
-  outline-color: #555555;
+  background-color: #eeeeee !important;
+  border-color: #555555 !important;
+  outline-color: #555555 !important;
   color: #000000 !important; }
 
 .cc-mono.cc-ctrl[type=button]:hover, .cc-ctrl[type=button]:hover {
@@ -25,9 +25,9 @@
   box-shadow: inset -2px -2px 0px #eeeeee; }
 
 .cc-bulma {
-  background-color: #EAF5F4;
-  border-color: #00D1B2;
-  outline-color: #00D1B2;
+  background-color: #EAF5F4 !important;
+  border-color: #00D1B2 !important;
+  outline-color: #00D1B2 !important;
   color: #205C53 !important; }
 
 .cc-bulma.cc-ctrl[type=button]:hover {
@@ -48,9 +48,9 @@
   box-shadow: inset -2px -2px 0px #EAF5F4; }
 
 .cc-red {
-  background-color: #FBECEC;
-  border-color: #A33A3A;
-  outline-color: #A33A3A;
+  background-color: #FBECEC !important;
+  border-color: #A33A3A !important;
+  outline-color: #A33A3A !important;
   color: #250101 !important; }
 
 .cc-red.cc-ctrl[type=button]:hover {

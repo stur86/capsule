@@ -24,9 +24,9 @@ $capsule-colors: (
 
 @each $profile, $cmap in $capsule-colors {
     .cc-#{$profile} {
-        background-color: map-get($cmap, 'lighter');
-        border-color: map-get($cmap, 'primary');
-        outline-color: map-get($cmap, 'primary');
+        background-color: map-get($cmap, 'lighter') !important;
+        border-color: map-get($cmap, 'primary') !important;
+        outline-color: map-get($cmap, 'primary') !important;
         color: map-get($cmap, 'darker') !important;
     }
 
