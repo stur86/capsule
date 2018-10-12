@@ -31,23 +31,23 @@ $capsule-colors: (
     }
 
     .cc-#{$profile}.cc-ctrl[type=button]:hover {
-        background-color: mix(white, map-get($cmap, 'lighter'), 10%);
+        background-color: mix(white, map-get($cmap, 'lighter'), 10%) !important;
     }
 
     .cc-#{$profile}.cc-ctrl[type=button]:active {
-        border-color: mix(white, map-get($cmap, 'primary'), 50%);
-        outline-color: mix(white, map-get($cmap, 'primary'), 50%);        
-        background-color: mix(black, map-get($cmap, 'lighter'), 10%);
+        border-color: mix(white, map-get($cmap, 'primary'), 50%) !important;
+        outline-color: mix(white, map-get($cmap, 'primary'), 50%) !important;        
+        background-color: mix(black, map-get($cmap, 'lighter'), 10%) !important;
     }
 
     .cc-#{$profile} .cc-ctrl[type=radio] + label {
-        border-color: map-get($cmap, 'primary');
-        outline-color: map-get($cmap, 'primary');        
+        border-color: map-get($cmap, 'primary') !important;
+        outline-color: map-get($cmap, 'primary') !important;        
     }
 
     .cc-#{$profile}.cc-ctrl[type=checkbox]:checked + label, 
     .cc-#{$profile} .cc-ctrl[type=radio]:checked + label {
-      background-color: map-get($cmap, 'primary');
+      background-color: map-get($cmap, 'primary') !important;
       box-shadow: inset -2px -2px 0px map-get($cmap, 'lighter');
     }
 }
